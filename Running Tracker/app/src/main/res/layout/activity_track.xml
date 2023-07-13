@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="lastRecord"
+            type="com.finalcoursework.dataBase.Record" />
+        <variable
+            name="trackingBinderInterface"
+            type="com.finalcoursework.service.TrackingService.TrackingBinder" />
+        <variable
+            name="fusedLocationClient"
+            type="com.google.android.gms.location.FusedLocationProviderClient" />
+        <variable
+            name="locationCallBack"
+            type="com.google.android.gms.location.LocationCallback" />
+        <variable
+            name="myMap"
+            type="com.google.android.gms.maps.GoogleMap" />
+        <variable
+            name="serviceConnection"
+            type="android.content.ServiceConnection" />
+        <variable
+            name="databaseViewModel"
+            type="com.finalcoursework.ui.viewModels.TrackingViewModel" />
+        <variable
+            name="RecordingHandler"
+            type="com.finalcoursework.helpers.TrackingUtility" />
+        <variable
+            name="isBound"
+            type="Boolean" />
+        <variable
+            name="isBacked"
+            type="Boolean" />
+        <variable
+            name="saveDialog"
+            type="androidx.appcompat.app.AlertDialog" />
+        <variable
+            name="preSetString"
+            type="String" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.TrackActivity">
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/startRecording"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/linearLayout"
+            app:layout_constraintTop_toBottomOf="@id/frameLayout">
+
+            <TextView
+                android:id="@+id/distanceTraveled"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/distanceTraveled" />
+
+            <TextView
+                android:id="@+id/displayDistance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/preDisplayDistance" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/startRecording"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/linearLayout2"
+            app:layout_constraintTop_toBottomOf="@id/frameLayout">
+
+            <TextView
+                android:id="@+id/timeSpent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/timeSpent" />
+
+            <TextView
+                android:id="@+id/displayTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/preDisplayTime" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/frameLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/mapView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/startRecording"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/StartRecording"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/PauseRecording"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/stop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearLayout2" />
+
+        <Button
+            android:id="@+id/stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/StopRecording"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/toggle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

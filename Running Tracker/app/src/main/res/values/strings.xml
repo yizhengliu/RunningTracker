@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">finalCoursework</string>
+    <string name="FinePermission">Check Location Permission</string>
+    <string name="BackGroundPermission">Check Background Location Permission</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="permissionWarning">Permissions were not allowed to start the application,
+        please go back to settings to reactive your permissions.</string>
+    <string name="BackgroundPermissionWarning">To allow background location, please go to the \"permission\" section and
+        select the \"allow all the time\" option</string>
+    <string name="GotoSetting">Go to Setting</string>
+    <string name="StartTracking">Start Tracking</string>
+    <string name="gmk">ChangeMeIfNeeded</string>
+    <string name="StartRecording">Start Recording</string>
+    <string name="PauseRecording">Pause</string>
+    <string name="ResumeRecording">Resume</string>
+    <string name="StopRecording">Stop</string>
+    <string name="averageSpeed">Average Speed</string>
+    <string name="distanceTraveled">Distance have traveled:</string>
+    <string name="timeSpent">Time have spent:</string>
+    <string name="timeUnit">hh:mm:ss</string>
+    <string name="distanceUnit">metres</string>
+    <string name="displayTime">%1$2dH:%2$2dM:%3$2dS</string>
+    <string name="displayDistance">%d metres</string>
+    <string name="preDisplayTime">0H:0M:0S</string>
+    <string name="preDisplayDistance">0 metres</string>
+    <string name="sortedBy">Sorted by :</string>
+    <string name="annotation">Annotation</string>
+    <string-array name="sortStyle">
+        <item>Date</item>
+        <item>Average Speed</item>
+        <item>Distance Traveled</item>
+        <item>Time Spent</item>
+    </string-array>
+    <string name="statistics">statistics</string>
+    <string name="TotalTime">Total Time Spent:</string>
+    <string name="TotalDistance">Total Distance traveled:</string>
+    <string name="OverallAverageSpeed">Overall Average Speed:</string>
+    <string name="pressMe">(press me to go back)</string>
+    <string name="intiTimeValue">0H 0M 0S</string>
+    <string name="intiDistanceValue">0 Km</string>
+    <string name="intiAverageSpeedValue">0 Km/h</string>
+    <string name="id">%d</string>
+    <string name="help">Help button for user to get familiar with UIs</string>
+    <string name="guide">You can swipe to delete a record\n\nYou can also attach your image to one of your records by click on it</string>
+    <string name="mapImage">An image about the paths that user has traveled during the recording</string>
+    <string name="TodayTime">Time Spent Today:</string>
+    <string name="todayDistance">Distance traveled Today:</string>
+    <string name="TodayAverageSpeed">Average Speed Today:</string>
+    <string name="statisticsGuide">Number in the () shows the difference among last time\'s data and the best achieved data e.g. 13Km/h (+4, -9)\n+4 means did 4 Units better than last time and -9 indicates best score is 9 units better than today\'s record
+\nPress the dot on the graph to check details of each point (API bug, if no information shows then click again), the graph also allows zoom action</string>
+    <string name="totalTimeDisplay">%1$2dH:%2$2dM:%3$2dS</string>
+    <string name="totalDistanceDisplay">%1$.3f Km%2$s</string>
+    <string name="overallAverageSpeed">%1$.2f Km/h%2$s</string>
+    <string name="nor">Keep your pace, you can do it! :)</string>
+    <string name="disCon">Well done, you have travelled more than yesterday</string>
+    <string name="aveCon">Well done, today\'s average speed is faster than yesterday</string>
+    <string name="newRec">Well done, new record!!</string>
+    <string name="welcome">No record has been made yet today</string>
+</resources>
